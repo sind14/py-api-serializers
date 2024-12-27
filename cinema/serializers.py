@@ -53,7 +53,7 @@ class MovieSessionSerializer(serializers.ModelSerializer):
 
 
 class MovieSessionListSerializer(MovieSessionSerializer):
-    movie_title  = serializers.CharField(
+    movie_title = serializers.CharField(
         source="movie.title",
         read_only=True
     )

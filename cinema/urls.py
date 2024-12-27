@@ -13,8 +13,16 @@ router = DefaultRouter()
 router.register("genres", viewset=GenreViewSet, basename="genres")
 router.register("movies", viewset=MovieViewSet, basename="movies")
 router.register("actors", viewset=ActorViewSet, basename="actors")
-router.register("cinema_halls", viewset=CinemaHallViewSet, basename="cinema_halls")
-router.register("movie_sessions", viewset=MovieSessionViewSet, basename="movie_sessions")
+router.register(
+    "cinema_halls",
+    viewset=CinemaHallViewSet,
+    basename="cinema_halls"
+)
+router.register(
+    "movie_sessions",
+    viewset=MovieSessionViewSet,
+    basename="movie_sessions"
+)
 urlpatterns = [
     path("", include(router.urls)),
     path("app/cinema/", include(router.urls)),
